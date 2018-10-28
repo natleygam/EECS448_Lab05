@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Natalia's Posts Database</h1>
+Which posts would you like to delete? <br><br>
+
+<form action="DeletePost.php" method="post">
+    <?php include 'ViewPosts.php'; for( $j=0; $j<$i ; $j++){ ?>
+    <table style="width:10%">
+    <tr>
+      <th>User</th>
+      <th>Post</th>
+      <th>Delete?</th>
+    </tr>
+    <tr>
+     <td><?php include 'ViewPosts.php'; echo $arr[$j];?></td><td><?php echo $postarr[$j]; ?></td><td><input type="checkbox" name="post[<?php include 'ViewPosts.php'; echo $j; ?>]" value="<?php include 'ViewPosts.php'; echo $postarr[$j]; ?>" /></td>
+   </tr>
+ </table>
+    <br>
+    <?php } ?>
+
+  <input type="submit">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+</head>
+<html>
+<body>
+<h1>Natalia's Posts Database</h1>
+
+Select an author:<br>
+
+    <form action="ViewUserPosts.php" method="post">
+
+      <select name=username>
+      <?php include 'Users.php'; for( $j=0; $j<$i ; $j++){ ?>
+      <option value="<?php include 'Users.php'; echo $arr[$j]; ?>"><?php include 'Users.php'; echo $arr[$j]; ?></option>
+      <?php } ?>
+      </select>
+    <input type="submit"><br><br>
+
+    </form>
+    <!--<?php include 'exercise1.php';?>-->
+</body>
+</html>
